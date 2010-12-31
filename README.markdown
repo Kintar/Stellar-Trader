@@ -16,6 +16,13 @@ between solar systems.
 * When your status within a system is sufficent, you can purcahse the permits required to build space stations and
 other features.
 
+## Links
+
+* [Homepage at Infinities-Within.net](http://stellartrader.infinities-within.net)
+* [Project Tracking](https://www.pivotaltracker.com/projects/185127/) at [Pivotal Tracker](http://www.pivotaltracker.com/)
+* [Github Repository](https://github.com/Kintar/Stellar-Trader)
+* [Twitter Feed](http://twitter.com/#!/stellartrader)
+
 ## Development Plan
 
 ### Phase One
@@ -23,18 +30,20 @@ other features.
 price based on supply.
 2. Develop populations.  Populations have personality, which determines how quickly they consume different items
 from their market, thus influencing supply.
-3. Add demand modelling to markets.  Adjust prices based on population personality, with higher demand items becoming
-more expensive until the market is saturated.
+3. Develop a basic, forms-based UI.
 
 ### Phase Two
 1. Add stellar bodies.  Bodies have parents (the body they orbit) and orbital parameters defining their motion.  Bodies
 are associated with a market, providing distance between markets that will vary over time.
 2. Add trade vessels with speed, fuel capacity, and cargo capacity.  Phase two vessels will travel in a straight line
 toward their destination, altering course as the destination moves.
+3. Add demand modelling to markets.  Adjust prices based on population personality, with higher demand items becoming
+more expensive until the market is saturated.
 
 ### Phase Three
 1. Add production facilities which can produce items if their requirements are available in the market.
 2. Track production cost of items based on the price of the required items at time of production.
+3. Upgrade UI to basic graphics.
 
 ### Phase Four
 1. Add computer-controlled traders.
@@ -49,6 +58,7 @@ cheaper when the moon that manufactures them is in perigee.)
 ### Phase Six
 1. Add reputation system, allowing players to perform actions to improve their reputation with a market.
 2. Add player-constructed production facilities.
+3. Possible UI improvements: 3d graphics, etc.
 
 ### Phase Seven
 1. Add solar systems, and incorporate systems into repuation logic.
@@ -56,4 +66,8 @@ cheaper when the moon that manufactures them is in perigee.)
 traders.
 
 ### Phase Eight
+1. Investigate multiplayer support with local or remote servers.
+2. Investigate web-based UI.
+
+### Phase ???
 1. Profit? :)
