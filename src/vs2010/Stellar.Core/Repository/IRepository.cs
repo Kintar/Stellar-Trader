@@ -7,6 +7,7 @@ namespace Stellar.Core.Repository
 {
     public interface IRepository<T> : IDisposable
     {
+        IEnumerable<T> All();
         IEnumerable<T> Find(Func<T, bool> predicate);
         void Add(T item);
         void Remove(T item);

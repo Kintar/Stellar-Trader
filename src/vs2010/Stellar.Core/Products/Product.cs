@@ -11,6 +11,7 @@ namespace Stellar.Core.Products
     {
         [DataMember(IsRequired = true)]
         public String Name { get; protected set; }
+
         [DataMember(IsRequired = true)]
         public Double BaseValue { get; protected set; }
 

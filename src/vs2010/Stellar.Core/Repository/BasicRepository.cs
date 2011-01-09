@@ -19,10 +19,15 @@ namespace Stellar.Core.Repository
             return items.Where(predicate);
         }
 
+        public IEnumerable<T> All()
+        {
+            ICollection<T> threadSafeIterable = new List<T>(items);
+            return threadSafeIterable;
+        }
+
         public void Add(T item)
         {
-            if (items.Count(i => i.Equals(item)) == 0)
-                items.Add(item);
+            if (!items.Contains(item)) items.Add(item);
         }
 
         public void Remove(T item)

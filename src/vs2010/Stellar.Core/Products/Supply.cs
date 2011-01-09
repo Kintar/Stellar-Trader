@@ -15,8 +15,10 @@ namespace Stellar.Core.Products
     {
         [DataMember(IsRequired=true)]
         public Product Product { get; protected set; }
+
         [DataMember(IsRequired = true)]
         public int Quantity { get; protected set; }
+
         [DataMember(IsRequired = true)]
         public double Cost { get; protected set; }
 
