@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stellar.Core", "Stellar.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stellar.DataAccess", "Stellar.DataAccess\Stellar.DataAccess.csproj", "{3B8ABBA3-B23F-4914-8C62-60110E980058}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stellar.Tests", "Stellar.Tests\Stellar.Tests.csproj", "{175506EC-F460-46C6-8F95-78BEF90B7E80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{3B8ABBA3-B23F-4914-8C62-60110E980058}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B8ABBA3-B23F-4914-8C62-60110E980058}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B8ABBA3-B23F-4914-8C62-60110E980058}.Release|Any CPU.Build.0 = Release|Any CPU
+		{175506EC-F460-46C6-8F95-78BEF90B7E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{175506EC-F460-46C6-8F95-78BEF90B7E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{175506EC-F460-46C6-8F95-78BEF90B7E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{175506EC-F460-46C6-8F95-78BEF90B7E80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

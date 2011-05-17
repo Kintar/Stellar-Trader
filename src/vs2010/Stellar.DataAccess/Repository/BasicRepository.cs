@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Linq.Expressions;
 
 namespace Stellar.Core.Repository
 {
@@ -14,9 +15,9 @@ namespace Stellar.Core.Repository
             items = collection;
         }
 
-        public IEnumerable<T> Find(Func<T, bool> predicate)
+        public IEnumerable<T> Find(Expression<Func<T, bool>> predicate)
         {
-            return items.Where(predicate);
+            return items.AsQueryable().Where(predicate);
         }
 
         public IEnumerable<T> All()
