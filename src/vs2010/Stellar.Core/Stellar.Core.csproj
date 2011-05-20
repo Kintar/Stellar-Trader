@@ -48,13 +48,12 @@
     <Compile Include="Items\Crate.cs" />
     <Compile Include="Items\Factory.cs" />
     <Compile Include="Items\Item.cs" />
+    <Compile Include="Markets\Behaviors\FixedPercentage.cs" />
+    <Compile Include="Markets\Behaviors\IMarketBehavior.cs" />
     <Compile Include="Markets\Market.cs" />
-    <Compile Include="Markets\MarketSlot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Markets\Behaviors\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

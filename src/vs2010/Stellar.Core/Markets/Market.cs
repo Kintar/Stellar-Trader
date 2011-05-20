@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Stellar.Core.Items;
+using Stellar.Core.Markets.Behaviors;
 
 namespace Stellar.Core.Markets
 {
@@ -16,16 +18,22 @@ namespace Stellar.Core.Markets
         public String Name { get; protected set; }
 
         /// <summary>
-        /// A collection of MarketSlots describing the goods this market will trade
+        /// This market's inventory, expressed as a collection of Crates
         /// </summary>
-        public IEnumerable<MarketSlot> Slots { get; protected set; }
+        public IEnumerable<Crate> Inventory { get; protected set; }
 
-        public Market(String name, IEnumerable<MarketSlot> slots)
+        /// <summary>
+        /// The behviors this market applies to transactions for its goods
+        /// </summary>
+        public IDictionary<Item, IMarketBehavior> Behaviors { get; protected set; }
+
+        public Market(String name, IEnumerable<Crate> inventory)
         {
             this.Name = name;
-            var mySlots = new List<MarketSlot>();
-            mySlots.AddRange(slots);
-            this.Slots = mySlots;
+            var mySlots = new List<Crate>();
+            mySlots.AddRange(inventory);
+            this.Inventory = mySlots;
         }
+
     }
 }

@@ -12,6 +12,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Settings", "Build Set
 		settings\UppercuT.config = settings\UppercuT.config
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{68A1460A-2757-41BD-9676-175B50C27BEE}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\docs\changelog.markdown.txt = ..\..\docs\changelog.markdown.txt
+		..\..\README.markdown = ..\..\README.markdown
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

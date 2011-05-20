@@ -18,19 +18,19 @@ namespace Stellar.Core.Items
         /// <summary>
         /// Base value of the item in currency units
         /// </summary>
-        public float BaseValue { get; protected set; }
+        public double BaseValue { get; protected set; }
 
         /// <summary>
         /// Mass of the item in kilograms
         /// </summary>
-        public float Mass { get; protected set; }
+        public double Mass { get; protected set; }
 
         /// <summary>
         /// Volume of the item in cubic meters
         /// </summary>
-        public float Volume { get; protected set; }
+        public double Volume { get; protected set; }
 
-        public Item(String name, float baseValue, float mass, float volume)
+        public Item(String name, double baseValue, double mass, double volume)
         {
             this.Name = name;
             this.BaseValue = baseValue;

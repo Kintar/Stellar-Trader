@@ -18,7 +18,7 @@ namespace Stellar.Core.Items
         /// <summary>
         /// The duration of a production run in game time units
         /// </summary>
-        public float ProductionInterval { get; protected set; }
+        public double ProductionInterval { get; protected set; }
 
         /// <summary>
         /// The list of items consumed by this factory and the quantity consumed in a ProductionInterval
@@ -30,7 +30,7 @@ namespace Stellar.Core.Items
         /// </summary>
         public IEnumerable<Crate> Production { get; protected set; }
 
-        public Factory(String name, float productionInterval, IEnumerable<Crate> consumption, IEnumerable<Crate> production)
+        public Factory(String name, double productionInterval, IEnumerable<Crate> consumption, IEnumerable<Crate> production)
         {
             this.Name = name;
             this.ProductionInterval = productionInterval;
