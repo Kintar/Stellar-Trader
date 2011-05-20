@@ -8,8 +8,8 @@ namespace Stellar.Core.Repository
 {
     public interface IRepository<T> : IDisposable
     {
-        IEnumerable<T> All();
-        IEnumerable<T> Find(Expression<Func<T, bool>> predicate);
+        IQueryable<T> All();
+        IQueryable<T> Find(Expression<Func<T, bool>> predicate);
         void Add(T item);
         void Remove(T item);
     }

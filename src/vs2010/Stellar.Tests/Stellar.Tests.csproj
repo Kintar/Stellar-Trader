@@ -47,6 +47,16 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Stellar.Core\Stellar.Core.csproj">
+      <Project>{74C25165-B6BF-428E-B603-0BC1917B616A}</Project>
+      <Name>Stellar.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Stellar.DataAccess\Stellar.DataAccess.csproj">
+      <Project>{3B8ABBA3-B23F-4914-8C62-60110E980058}</Project>
+      <Name>Stellar.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>$(SolutionDir)lib\nuget\nuget install $(ProjectDir)packages.config -o $(SolutionDir)Packages</PreBuildEvent>

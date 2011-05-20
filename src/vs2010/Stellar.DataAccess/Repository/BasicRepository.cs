@@ -15,15 +15,14 @@ namespace Stellar.Core.Repository
             items = collection;
         }
 
-        public IEnumerable<T> Find(Expression<Func<T, bool>> predicate)
+        public IQueryable<T> Find(Expression<Func<T, bool>> predicate)
         {
             return items.AsQueryable().Where(predicate);
         }
 
-        public IEnumerable<T> All()
+        public IQueryable<T> All()
         {
-            ICollection<T> threadSafeIterable = new List<T>(items);
-            return threadSafeIterable;
+            return items.AsQueryable();
         }
 
         public void Add(T item)
@@ -36,12 +35,11 @@ namespace Stellar.Core.Repository
             items.Remove(item);
         }
 
-        /// <summary>
-        /// Unimplemented : There's no valid use for IDisposable in this implementation
-        /// </summary>
         public void Dispose()
         {
-            // GNDN
+            // I /think/ this will invalidate any IQueryables that are still floating around out there
+            // TODO: validate the above assumption
+            items = null;
         }
     }
 }
