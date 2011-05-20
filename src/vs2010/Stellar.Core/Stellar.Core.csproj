@@ -48,9 +48,12 @@
     <Compile Include="Items\Crate.cs" />
     <Compile Include="Items\Factory.cs" />
     <Compile Include="Items\Item.cs" />
-    <Compile Include="Items\Market.cs" />
-    <Compile Include="Items\MarketSlot.cs" />
+    <Compile Include="Markets\Market.cs" />
+    <Compile Include="Markets\MarketSlot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Markets\Behaviors\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
