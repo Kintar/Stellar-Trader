@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stellar.DataAccess", "Stell
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stellar.Tests", "Stellar.Tests\Stellar.Tests.csproj", "{175506EC-F460-46C6-8F95-78BEF90B7E80}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Settings", "Build Settings", "{815CED59-88FB-4F83-B071-F04269C24E53}"
+	ProjectSection(SolutionItems) = preProject
+		settings\UppercuT.config = settings\UppercuT.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
