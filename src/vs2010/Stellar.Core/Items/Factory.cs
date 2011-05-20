@@ -5,12 +5,41 @@ using System.Text;
 
 namespace Stellar.Core.Items
 {
+    /// <summary>
+    /// Describes a method for producing an item given input materials and time.
+    /// </summary>
     public class Factory
     {
-        public virtual String Name { get; protected set; }
-        public virtual Item ItemProduced { get; protected set; }
-        public virtual int UnitsProduced { get; protected set; }
-        public virtual float ProductionInterval { get; protected set; }
-        public virtual IEnumerable<Crate> Consumption { get; protected set; }
+        /// <summary>
+        /// The name of this factory. E.g., "Low-Tech Steel Foundry"
+        /// </summary>
+        public String Name { get; protected set; }
+
+        /// <summary>
+        /// The duration of a production run in game time units
+        /// </summary>
+        public float ProductionInterval { get; protected set; }
+
+        /// <summary>
+        /// The list of items consumed by this factory and the quantity consumed in a ProductionInterval
+        /// </summary>
+        public IEnumerable<Crate> Consumption { get; protected set; }
+
+        /// <summary>
+        /// The list of items produced by this factory and the quantity produced in a ProductionInterval
+        /// </summary>
+        public IEnumerable<Crate> Production { get; protected set; }
+
+        public Factory(String name, float productionInterval, IEnumerable<Crate> consumption, IEnumerable<Crate> production)
+        {
+            this.Name = name;
+            this.ProductionInterval = productionInterval;
+            List<Crate> tempList = new List<Crate>();
+            tempList.AddRange(consumption);
+            this.Consumption = tempList;
+            tempList = new List<Crate>();
+            tempList.AddRange(production);
+            this.Production = tempList;
+        }
     }
 }
