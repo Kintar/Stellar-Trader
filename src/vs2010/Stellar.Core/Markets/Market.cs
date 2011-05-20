@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Stellar.Core.Items
+namespace Stellar.Core.Markets
 {
     /// <summary>
     /// Describes an actor that will buy and sell a list of products

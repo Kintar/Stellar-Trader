@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Stellar.Core.Items;
 
-namespace Stellar.Core.Items
+namespace Stellar.Core.Markets
 {
     /// <summary>
     /// A MarketSlot describes a quantity of an item, and the buy and sell price for units of that item.
