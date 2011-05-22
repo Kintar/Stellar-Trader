@@ -2,7 +2,7 @@
 
 ## Concept
 
-You have inherited a transport ship and a small cargo depot on Phobos, along with a paltry amount of money.
+You have inherited a transport ship and a small cargo depot along with a paltry amount of money.
 You must use your inheritence and wits to build a shipping and manufacturing empire.
 
 ## Features

@@ -1,0 +1,4 @@
+# Stellar Trader Future Ideas
+
+* Populations track the resources they consume to improve their world
+* Track consumed resources to indicate what type of world; planetary city, high industrial, nature retreat, etc?
