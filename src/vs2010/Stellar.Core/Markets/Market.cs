@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Stellar.Core.Items;
-using Stellar.Core.Markets.Behaviors;
 
 namespace Stellar.Core.Markets
 {
@@ -17,22 +16,63 @@ namespace Stellar.Core.Markets
         /// </summary>
         public String Name { get; protected set; }
 
-        /// <summary>
-        /// This market's inventory, expressed as a collection of Crates
-        /// </summary>
-        public IEnumerable<Crate> Inventory { get; protected set; }
+        protected IDictionary<Item, Crate> crates;
+        protected IDictionary<Item, double> sellPrices;
+        protected IDictionary<Item, double> buyPrices;
 
         /// <summary>
-        /// The behviors this market applies to transactions for its goods
+        /// This market's inventory, expressed as an enumeration of Crates
         /// </summary>
-        public IDictionary<Item, IMarketBehavior> Behaviors { get; protected set; }
-
+        public IEnumerable<Crate> Inventory
+        {
+            get
+            {
+                return crates.Values;
+            }
+        }
+        
         public Market(String name, IEnumerable<Crate> inventory)
         {
             this.Name = name;
-            var mySlots = new List<Crate>();
-            mySlots.AddRange(inventory);
-            this.Inventory = mySlots;
+            crates = ProjectInventoryToDictionary(inventory);
+            sellPrices = new Dictionary<Item, double>();
+            buyPrices = new Dictionary<Item, double>();
+
+            foreach (Item item in AvailableItems)
+            {
+                sellPrices[item] = 0;
+                buyPrices[item] = 0;
+            }
+        }
+
+        /// <summary>
+        /// Used to initialize a new market from an enumeration of crates.
+        /// </summary>
+        /// <param name="inventory"></param>
+        /// <returns></returns>
+        private IDictionary<Item, Crate> ProjectInventoryToDictionary(IEnumerable<Crate> inventory)
+        {
+            var newInventory = new Dictionary<Item, Crate>();
+            foreach (var crate in inventory)
+            {
+                if (newInventory.ContainsKey(crate.Item))
+                {
+                    var oldCrate = newInventory[crate.Item];
+                    var newCrate = new Crate(crate.Item, oldCrate.Quantity + crate.Quantity);
+                    newInventory[crate.Item] = newCrate;
+                }
+                else
+                {
+                    newInventory[crate.Item] = crate;
+                }
+            }
+
+            return newInventory;
+        }
+
+        public IEnumerable<Item> AvailableItems
+        {
+            get { return crates.Keys; }
         }
 
     }

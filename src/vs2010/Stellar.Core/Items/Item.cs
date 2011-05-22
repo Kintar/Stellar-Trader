@@ -32,10 +32,28 @@ namespace Stellar.Core.Items
 
         public Item(String name, double baseValue, double mass, double volume)
         {
+            if (String.IsNullOrEmpty(name))
+                throw new ArgumentNullException("name");
+
             this.Name = name;
             this.BaseValue = baseValue;
             this.Mass = mass;
             this.Volume = volume;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Item))
+                return false;
+            else
+            {
+                return obj != null && ((Item)obj).Name.Equals(Name);
+            }
+        }
+
+        public override int GetHashCode()
+        {
+            return Name.GetHashCode();
         }
     }
 }
