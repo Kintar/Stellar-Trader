@@ -1,0 +1,23 @@
+# Entity System
+
+## Form
+* Form objects are renderable items that represent the way a game token looks in the UI.  They may contain space, state and action
+objects to modify the way they render.
+
+## State
+* State objects are data, pure and simple.  They are "game state at this point in time".
+
+## Space
+* A space object represents a set of Entities associated with one another.
+* Each entity object contains a space object that defines its scope of effect.
+* A game will typically contain two top-level space objects; logical space (the top level entities in the world) and virtual space (the entities currently being rendered to the UI)
+
+## Action
+* Actions invoke over a perod of time, or until cancelled by changes in state. They are "game state changes over time".
+* Actions have a source, or user, entity, and either a target entity or a target set.  (Maybe always a set, but potentially a 
+set of one?)
+* Actions are assigned to an entity in two sets: Possible and Current.
+
+## Entity
+* Entities are collections of Actions, States, Spaces and Forms.  An entity represents a logical game unit, such as a bullet, a 
+ship's inventory, or a solar system.
