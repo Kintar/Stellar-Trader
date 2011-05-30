@@ -45,10 +45,6 @@
     <Compile Include="..\SolutionVersion.cs">
       <Link>SolutionVersion.cs</Link>
     </Compile>
-    <Compile Include="Items\Crate.cs" />
-    <Compile Include="Items\Factory.cs" />
-    <Compile Include="Items\Item.cs" />
-    <Compile Include="Markets\Market.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

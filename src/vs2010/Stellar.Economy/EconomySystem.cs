@@ -6,7 +6,7 @@ using InfinitySystem;
 
 namespace Stellar.EconomySystem
 {
-    public class EconomySystem : SubSystem
+    public class EconomySystem : ComponentSystem
     {
         public override void Tick(long millisecondsSinceLastTick)
         {

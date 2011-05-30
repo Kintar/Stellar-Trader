@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stellar.Core", "Stellar.Core\Stellar.Core.csproj", "{74C25165-B6BF-428E-B603-0BC1917B616A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Settings", "Build Settings", "{815CED59-88FB-4F83-B071-F04269C24E53}"
-	ProjectSection(SolutionItems) = preProject
-		settings\UppercuT.config = settings\UppercuT.config
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{68A1460A-2757-41BD-9676-175B50C27BEE}"
 	ProjectSection(SolutionItems) = preProject

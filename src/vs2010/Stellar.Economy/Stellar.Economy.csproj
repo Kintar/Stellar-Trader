@@ -34,6 +34,9 @@
     <Reference Include="InfinitySystem">
       <HintPath>..\lib\InfinitySystem\InfinitySystem.dll</HintPath>
     </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,13 +47,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EconomySystem.cs" />
+    <Compile Include="FactoryDefinition.cs" />
+    <Compile Include="ItemFactory.cs" />
     <Compile Include="ItemDefinition.cs" />
+    <Compile Include="MarketValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stock.cs" />
+    <Compile Include="Warehouse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>$(SolutionDir)\lib\nuget\nuget install $(ProjectDir)packages.config -o $(SolutionDir)packages</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
