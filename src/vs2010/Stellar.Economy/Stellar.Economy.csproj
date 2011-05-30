@@ -8,8 +8,8 @@
     <ProjectGuid>{5424FDD7-DB98-4440-B46E-30271276AFC1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Stellar.EconomySystem</RootNamespace>
-    <AssemblyName>Stellar.EconomySystem</AssemblyName>
+    <RootNamespace>Stellar.Economy</RootNamespace>
+    <AssemblyName>Stellar.Economy</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,7 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EconomySystem.cs" />
+    <Compile Include="ItemDefinition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

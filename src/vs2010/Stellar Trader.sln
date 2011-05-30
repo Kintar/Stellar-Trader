@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Settings", "Build Set
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{68A1460A-2757-41BD-9676-175B50C27BEE}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\docs\changelog.markdown.txt = ..\..\docs\changelog.markdown.txt
+		..\..\docs\changelog.markdown = ..\..\docs\changelog.markdown
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stellar.Economy", "Stellar.Economy\Stellar.Economy.csproj", "{5424FDD7-DB98-4440-B46E-30271276AFC1}"
