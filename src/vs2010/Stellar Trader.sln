@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stellar.Core", "Stellar.Core\Stellar.Core.csproj", "{74C25165-B6BF-428E-B603-0BC1917B616A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stellar.DataAccess", "Stellar.DataAccess\Stellar.DataAccess.csproj", "{3B8ABBA3-B23F-4914-8C62-60110E980058}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stellar.Tests", "Stellar.Tests\Stellar.Tests.csproj", "{175506EC-F460-46C6-8F95-78BEF90B7E80}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Settings", "Build Settings", "{815CED59-88FB-4F83-B071-F04269C24E53}"
 	ProjectSection(SolutionItems) = preProject
 		settings\UppercuT.config = settings\UppercuT.config
@@ -15,8 +11,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{68A1460A-2757-41BD-9676-175B50C27BEE}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\docs\changelog.markdown.txt = ..\..\docs\changelog.markdown.txt
-		..\..\README.markdown = ..\..\README.markdown
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stellar.Economy", "Stellar.Economy\Stellar.Economy.csproj", "{5424FDD7-DB98-4440-B46E-30271276AFC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,14 +25,10 @@ Global
 		{74C25165-B6BF-428E-B603-0BC1917B616A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74C25165-B6BF-428E-B603-0BC1917B616A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74C25165-B6BF-428E-B603-0BC1917B616A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B8ABBA3-B23F-4914-8C62-60110E980058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B8ABBA3-B23F-4914-8C62-60110E980058}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B8ABBA3-B23F-4914-8C62-60110E980058}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B8ABBA3-B23F-4914-8C62-60110E980058}.Release|Any CPU.Build.0 = Release|Any CPU
-		{175506EC-F460-46C6-8F95-78BEF90B7E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{175506EC-F460-46C6-8F95-78BEF90B7E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{175506EC-F460-46C6-8F95-78BEF90B7E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{175506EC-F460-46C6-8F95-78BEF90B7E80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5424FDD7-DB98-4440-B46E-30271276AFC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5424FDD7-DB98-4440-B46E-30271276AFC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5424FDD7-DB98-4440-B46E-30271276AFC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5424FDD7-DB98-4440-B46E-30271276AFC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
